@@ -1,5 +1,8 @@
+// import dependancies
 const inquirer = require("inquirer");
+const { viewEmployees } = require("./lib/employee");
 
+//Questions to be posed on application initialisation
 const initQuestions = () => {
   inquirer
     .prompt([
@@ -8,6 +11,7 @@ const initQuestions = () => {
         name: "nextAction",
         message: "Select one of the following?",
         choices: [
+        //Seperator to seperate types of action in list
           new inquirer.Separator("*** VIEW ***"),
           "View all departments",
           "View all roles",
@@ -22,27 +26,28 @@ const initQuestions = () => {
         ],
       },
     ])
+    //Switch calls appropriate function based on response
     .then((response) => {
-      switch (response) {
+      switch (response.nextAction) {
         case "View all departments":
           viewDepartments();
           break;
         case "View all roles":
           viewRoles();
           break;
-        case "View all roles":
+        case "View all employees":
           viewEmployees();
           break;
-        case "View all roles":
+        case "Add a department":
           addDepartment();
           break;
-        case "View all roles":
+        case "Add a role":
           addRole();
           break;
-        case "View all roles":
+        case "Add an employee":
           addEmployee();
           break;
-        case "View all roles":
+        case "Update an employee":
           updateEmployee();
           break;
         default:
@@ -51,3 +56,6 @@ const initQuestions = () => {
       }
     });
 };
+
+//Calls initQuestions when application is initialized.
+initQuestions();
