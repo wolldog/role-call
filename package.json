@@ -1,0 +1,24 @@
+{
+  "name": "role-call",
+  "version": "1.0.0",
+  "description": "CLI staff database management application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wolldog/role-call.git"
+  },
+  "author": "Lydia Wallis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wolldog/role-call/issues"
+  },
+  "homepage": "https://github.com/wolldog/role-call#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4",
+    "mysql2": "^2.2.5",
+    "console.table": "^0.10.0"
+  }
+}
