@@ -2,7 +2,7 @@
 const inquirer = require("inquirer");
 const { viewDepartments } = require("./lib/department");
 const { viewEmployees, addEmployee } = require("./lib/employee");
-const { viewRoles } = require("./lib/roles");
+const { viewRoles, addRole } = require("./lib/roles");
 
 //Questions to be posed on application initialisation
 const initQuestions = () => {
@@ -76,7 +76,7 @@ const nextAction = () => {
           initQuestions();
         //if user responds 'N' application closes with thank you message.
         } else {
-          console.log("Thank you for using EmployTrak!");
+          console.log("Thank you for using Role-Call!");
           process.exit();
         }
       });
