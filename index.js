@@ -1,7 +1,7 @@
 // import dependancies
 const inquirer = require("inquirer");
 const { viewDepartments } = require("./lib/department");
-const { viewEmployees } = require("./lib/employee");
+const { viewEmployees, addEmployee } = require("./lib/employee");
 const { viewRoles } = require("./lib/roles");
 
 //Questions to be posed on application initialisation
@@ -41,16 +41,16 @@ const initQuestions = () => {
           viewEmployees(nextAction);
           break;
         case "Add a department":
-          addDepartment();
+          addDepartment(nextAction);
           break;
         case "Add a role":
-          addRole();
+          addRole(nextAction);
           break;
         case "Add an employee":
-          addEmployee();
+          addEmployee(nextAction);
           break;
         case "Update an employee":
-          updateEmployee();
+          updateEmployee(nextAction);
           break;
         default:
           console.log("Sorry, something went wrong");
