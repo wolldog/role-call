@@ -1,6 +1,7 @@
 // import dependancies
 const inquirer = require("inquirer");
 const { viewEmployees } = require("./lib/employee");
+const { viewRoles } = require("./lib/roles");
 
 //Questions to be posed on application initialisation
 const initQuestions = () => {
@@ -30,13 +31,13 @@ const initQuestions = () => {
     .then((response) => {
       switch (response.nextAction) {
         case "View all departments":
-          viewDepartments();
+          viewDepartments(nextAction);
           break;
         case "View all roles":
-          viewRoles();
+          viewRoles(nextAction);
           break;
         case "View all employees":
-          viewEmployees();
+          viewEmployees(nextAction);
           break;
         case "Add a department":
           addDepartment();
@@ -56,6 +57,29 @@ const initQuestions = () => {
       }
     });
 };
+
+//Function to ask user if they would like
+//continue using role-call or exit
+const nextAction = () => {
+    inquirer
+      .prompt([
+        {
+          type: "confirm",
+          name: "continue",
+          message: "Would you like to continue?",
+        },
+      ])
+      //if user responds 'Y' function calls initQuestions
+      .then((response) => {
+        if (response.continue === true) {
+          initQuestions();
+        //if user responds 'N' application closes with thank you message.
+        } else {
+          console.log("Thank you for using EmployTrak!");
+          process.exit();
+        }
+      });
+  };
 
 //Calls initQuestions when application is initialized.
 initQuestions();
