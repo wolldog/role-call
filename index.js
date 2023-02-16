@@ -1,5 +1,6 @@
 // import dependancies
 const inquirer = require("inquirer");
+const { viewDepartments } = require("./lib/department");
 const { viewEmployees } = require("./lib/employee");
 const { viewRoles } = require("./lib/roles");
 
