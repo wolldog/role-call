@@ -1,7 +1,7 @@
 // import dependancies
 const inquirer = require("inquirer");
 const { viewDepartments, addDepartment } = require("./lib/department");
-const { viewEmployees, addEmployee } = require("./lib/employee");
+const { viewEmployees, addEmployee, updateEmployee } = require("./lib/employee");
 const { viewRoles, addRole } = require("./lib/roles");
 
 //Questions to be posed on application initialisation
@@ -53,7 +53,8 @@ const initQuestions = () => {
           updateEmployee(nextAction);
           break;
         default:
-          console.log("Sorry, something went wrong");
+          console.log("Sorry, something went wrong")
+          nextAction;
           break;
       }
     });
