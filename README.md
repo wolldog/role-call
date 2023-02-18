@@ -34,6 +34,8 @@ The VIEW options will display one of the following:
 
 The ADD options will allow you to add either a new department, role or employee by asking the relevant questions.
 
+The UPDATE option enables you to update the employee's role by presenting you with a list of all employees from which to select the one that should be updated. You are presented with a list of roles to choose from.
+
 After each action is complete you can choose to continue or quit the application.
 
 ### Role-Call Demo
