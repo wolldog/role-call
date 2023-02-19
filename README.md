@@ -52,7 +52,7 @@ N/A
 
 ## Questions
 
-  If you have questions regarding the Team-mate application,
+  If you have questions regarding the Role-Call application,
   you can contact me directly by email at lydiawallis@live.co.uk or reach out
   to me on GitHub at https://www.github.com/wolldog.
 
