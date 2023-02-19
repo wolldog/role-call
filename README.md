@@ -2,7 +2,7 @@
 
 ## Description
 
-Roll-Call is a command line application to maintain your staff database. 
+Role-Call is a command line application to maintain your staff database. 
 
 ## Installation
 
@@ -39,7 +39,8 @@ The UPDATE option enables you to update the employee's role by presenting you wi
 After each action is complete you can choose to continue or quit the application.
 
 ### Role-Call Demo
-Todo: add video link
+
+https://user-images.githubusercontent.com/110208272/219905059-c4cd95e2-7902-4c75-8488-3f5fe5cf6384.mp4
 
 ## License
 
@@ -54,4 +55,8 @@ N/A
   If you have questions regarding the Team-mate application,
   you can contact me directly by email at lydiawallis@live.co.uk or reach out
   to me on GitHub at https://www.github.com/wolldog.
+
+
+
+
 
